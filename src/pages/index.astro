@@ -4,60 +4,33 @@
 
 <html lang="es">
 	<head>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Memobrainrot</title>
 	</head>
-	<body>
-		<div class="gallery">
-			{[
-				{
-					name: 'Tralalero Tralala',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/a/ac/Tralalero_tralala.jpg/revision/latest/top-crop/width/160/height/120?cb=20250321131418',
-				},
-				{
-					name: 'Brr brr Patapim',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/f/f7/Brr_Brr_Patapim.png/revision/latest/top-crop/width/160/height/120?cb=20250326180223',
-				},
-				{
-					name: 'Trippi Troppi',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/6/62/Trippi_Troppi2.webp/revision/latest/top-crop/width/160/height/120?cb=20250408115944',
-				},
-				{
-					name: 'Bombardiro Crocodillo',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/1/10/Bombardiro_Crocodilo.jpg/revision/latest/top-crop/width/160/height/120?cb=20250417102447',
-				},
-				{
-					name: 'Capuchino Assassino',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/3/38/Hq720.jpg/revision/latest/top-crop/width/160/height/120?cb=20250405141658',
-				},
-				{
-					name: 'Ballerina Cappuccina',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/8/8f/Videoframe_2657.png/revision/latest/top-crop/width/160/height/120?cb=20250424121732',
-				},
-				{
-					name: 'Trippa Troppa Tralala Lirilì Rilà Tung Tung Sahur Boneca Tung Tung Tralalelo Trippi Troppa Crocodina',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/6/6d/Comb3.png/revision/latest/top-crop/width/160/height/120?cb=20250414212355',
-				},
-				{
-					name: 'Trulimero Trulicina',
-					imageUrl: 'https://static.wikia.nocookie.net/brainrotnew/images/0/02/Trulimero_trulicina.png/revision/latest/top-crop/width/160/height/120?cb=20250417133042',
-				},
-			].map((character) => (
-				<div class="gallery-item">
-					{character.imageUrl ? (
-						<img src={character.imageUrl} alt={character.name} loading="lazy" />
-					) : (
-						<div class="placeholder">Image not available</div>
-					)}
-					<p>{character.name}</p>
-				</div>
-			))}
-		</div>
+	<body class="bg-stone-900 justify-center items-center flex flex-col min-h-screen text-white">
+		<!-- Big h1 with a text Memo brainrot -->
+		<section class="flex flex-col items-center justify-center">
+			<h1 class="text-6xl font-bold">Memobrainrot</h1>
+			<p>Un juego de memoria basado en Brainrot</p>
+			<p>¡Descubre y recuerda las imágenes!</p>
+			<a href="/privacidad" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+				Politicas de privacidad
+			</a>
+		</section>
 
 		<style>
+			.hero {
+				text-align: center;
+				padding: 2rem;
+				background-color: #f0f0f0;
+				border-radius: 8px;
+				margin: 2rem auto;
+				max-width: 800px;
+			}
 			.gallery {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
